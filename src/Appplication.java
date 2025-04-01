@@ -4,7 +4,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.Scanner;
-
+import java.io.IOException;
 
 public class Appplication {
     public static void main(String[] args) {
@@ -15,6 +15,14 @@ public class Appplication {
         catch(IOException e) {
             e.printStackTrace();
         }
+
+        try {
+            RandomGenerator.generateRandomWordsFile("outrand.txt");
+            System.out.println("Fisierul outrand.txt a fost generat cu succes.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
     static void printSmallTextFile(String inputfile,String outputfile) throws IOException {
         System.out.println("Using Filesc.readAllLines:");
