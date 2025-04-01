@@ -36,5 +36,4 @@ public class Appplication {
         }
         Files.write(outputPath, modifiedContent.toString().getBytes());
     }
-
 }
